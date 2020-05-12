@@ -2,8 +2,10 @@
 
 session_start();
 
-$_SESSION["nombre"] = $_POST["nombre"];
-$_SESSION["apellido"] = $_POST["apellido"];
+setcookie("nombre", $_POST["nombre"]);
+setcookie("apellido", $_POST["apellido"]);
+setcookie("modo_oscuro", $_POST["modo_oscuro"]);
+setcookie("fuente", $_POST["fuente"]);
 
 header("Location: bienvenido.php");
 exit();
